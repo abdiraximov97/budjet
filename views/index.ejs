@@ -1,0 +1,36 @@
+
+<%- include("parts/header") %> 
+
+<div class="login-wrapper">
+    <form action="/" method="Post" class="signUpForm">
+        <img src="/assets/photo/avatar.png" class="userImg" alt="avatar img">
+        <h2 class="title"> Kirish </h2>
+        <div class="input-group">
+            <input type="text" name="userLogin" id="userLogin" required>
+            <label for="userLogin">Login</label>
+        </div>
+        <div class="input-group">
+            <input type="password" name="userPassword" id="userPassword" required>
+            <label for="userPassword">Parol</label>
+        </div>
+        <div class="btn-group">
+            <a href="./registration.ejs" class="reg-link">Ro'yxatdan o'tish</a>
+            <input type="submit" name="submitBtn" value="kirish" class="submit-btn">
+        </div>
+        <a href="#forgot-pw" class="forgot-pw">Parolni unutdizgizmi</a>
+    </form>
+
+    <div id="forgot-pw">
+        <form action="" class="form" method="POST">
+            <a href="#" class="close">&times;</a>
+            <h2 class="title">Parolni tiklash</h2>
+            <div class="input-group">
+                <input type="email" name="email" id="email" autocomplete="off" required>
+                <label for="email">Email</label>
+            </div>
+            <input type="submit" name="submitButton" value="tekshirish" class="submit-btn">
+        </form>
+    </div>
+</div>
+
+<%- include("parts/header") %> 

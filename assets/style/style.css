@@ -1,0 +1,273 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+}
+
+.login-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  background: url("/assets/photo/bgImg2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.login-wrapper .signUpForm {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  padding: 80px 40px 40px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  color: #ffffff;
+  -webkit-box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+}
+
+.login-wrapper .signUpForm .userImg {
+  position: absolute;
+  top: -10%;
+  left: calc(50% - 50px);
+  width: 100px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.login-wrapper .signUpForm .title {
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  color: #ff653f;
+}
+
+.login-wrapper .signUpForm .input-group {
+  position: relative;
+}
+
+.login-wrapper .signUpForm .input-group input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  outline: none;
+  background-color: transparent;
+  color: inherit;
+}
+
+.login-wrapper .signUpForm .input-group label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  font-size: 16px;
+  pointer-events: none;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.login-wrapper .signUpForm .input-group input:focus + label,
+.login-wrapper .signUpForm .input-group input:valid + label {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+  color: #ff653f;
+  font-size: 14px;
+}
+
+.login-wrapper .signUpForm .btn-group {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.login-wrapper .signUpForm .btn-group .reg-link {
+  font-size: 16px;
+  color: inherit;
+}
+
+.login-wrapper .signUpForm .btn-group .submit-btn {
+  display: block;
+  margin-left: auto;
+  border: none;
+  outline: none;
+  background: #ff653f;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-wrapper .signUpForm .forgot-pw {
+  font-size: 16px;
+  color: inherit;
+}
+
+.login-wrapper .signUpForm::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  -webkit-transform: skewX(-25deg);
+          transform: skewX(-25deg);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  pointer-events: none;
+}
+
+.login-wrapper #forgot-pw {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  z-index: 1;
+  background-color: #c2c2c2;
+  opacity: 0;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.login-wrapper #forgot-pw .form {
+  width: 100%;
+  max-width: 380px;
+  padding: 80px 40px 40px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+}
+
+.login-wrapper #forgot-pw .form .title {
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  color: #ff653f;
+}
+
+.login-wrapper #forgot-pw .form .input-group {
+  position: relative;
+}
+
+.login-wrapper #forgot-pw .form .input-group input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  outline: none;
+  background-color: transparent;
+  color: inherit;
+}
+
+.login-wrapper #forgot-pw .form .input-group label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  font-size: 16px;
+  pointer-events: none;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.login-wrapper #forgot-pw .form .input-group input:focus + label,
+.login-wrapper #forgot-pw .form .input-group input:valid + label {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+  color: #ff653f;
+  font-size: 14px;
+  background-color: transparent;
+}
+
+.login-wrapper #forgot-pw .form .submit-btn {
+  display: block;
+  margin-left: auto;
+  border: none;
+  outline: none;
+  background: #ff653f;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-wrapper #forgot-pw .form .close {
+  position: absolute;
+  right: 24px;
+  top: 8px;
+  font-size: 32px;
+  font-weight: 900;
+  text-decoration: none;
+  color: #ff653f;
+}
+
+.login-wrapper #forgot-pw .form::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  -webkit-transform: skewX(-25deg);
+          transform: skewX(-25deg);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  pointer-events: none;
+}
+
+.login-wrapper #forgot-pw:target {
+  height: 100%;
+  opacity: 1;
+}
+/*# sourceMappingURL=style.css.map */
