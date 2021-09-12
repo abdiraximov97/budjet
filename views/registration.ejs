@@ -1,19 +1,39 @@
 
 <%- include("parts/header") %> 
+<% var error %> 
 
 <div class="reg-wrapper">
-    <form action="" class="reg-form">
+    <form action="/registration" class="reg-form" name="regForm" method="POST" autocomplete="off">
         <h1 class="title">Ro'yxatdan o'tish</h1>
-        <input id="name" type="text" name="name" required>
-        <label for="name">Ism</label>
-        <input id="firstName" type="text" name="firstName" required>
-        <label for="firstName">Familiya</label>
-        <input id="username" type="text" name="username" required>
-        <label for="username">Username</label>
-        <input id="email" type="text" name="email" required>
-        <label for="email">Email</label>
-        <input id="password" type="password" name="password" required>
-        <label for="password">Parol</label>
+        <% if(error) { %>
+            <div class="alert alert-danger my-2" role="alert">
+                <%= error %> 
+              </div>
+        <% } %> 
+        <div class="input-group">
+            <input id="name" type="text" name="name" required>
+            <label for="name">Ism</label>
+        </div>
+        <div class="input-group">
+            <input id="firstName" type="text" name="firstName" required>
+            <label for="firstName">Familiya</label>
+        </div>
+        <div class="input-group">
+            <input id="username" type="text" name="username" required>
+            <label for="username">Username</label> 
+        </div>
+        <div class="input-group">
+            <input id="email" type="text" name="email" required>
+            <label for="email">Email</label>
+        </div>
+        <div class="input-group">
+            <input id="password" type="password" name="password" required>
+            <label for="password">Parol</label>
+        </div>
+        <div class="btn-group">
+            <a href="/" class="btn registration-btn">Login</a>
+            <button id="regButton" class="btn registration-btn ms-2" type="submit">Ro'yxatdan o'tish</button>
+        </div>
     </form>
 </div>
 

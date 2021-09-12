@@ -270,4 +270,114 @@ body {
   height: 100%;
   opacity: 1;
 }
+
+.reg-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  background: url("/assets/photo/bgImg2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.reg-wrapper .reg-form {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  padding: 40px 40px 40px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  color: #ffffff;
+  -webkit-box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.reg-wrapper .reg-form .title {
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  color: #ff653f;
+  font-size: 32px;
+}
+
+.reg-wrapper .reg-form .input-group {
+  position: relative;
+}
+
+.reg-wrapper .reg-form .input-group input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  outline: none;
+  background-color: transparent;
+  color: inherit;
+}
+
+.reg-wrapper .reg-form .input-group label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  font-size: 16px;
+  pointer-events: none;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.reg-wrapper .reg-form .input-group input:focus + label,
+.reg-wrapper .reg-form .input-group input:valid + label {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+  color: #ff653f;
+  font-size: 14px;
+}
+
+.reg-wrapper .reg-form .btn-group {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.reg-wrapper .reg-form .btn-group .registration-btn {
+  display: block;
+  margin-left: auto;
+  border: none;
+  outline: none;
+  background: #ff653f;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0;
+}
 /*# sourceMappingURL=style.css.map */

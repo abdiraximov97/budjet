@@ -16,7 +16,7 @@
         position: relative;
         width: 100%;
         max-width: 380px;
-        padding: 80px 40px 40px;
+        padding: 40px 40px 40px;
         background: rgba(0, 0, 0, 0.7);
         border-radius: 10px;
         color: #ffffff;
@@ -29,36 +29,64 @@
             letter-spacing: 1px;
             margin-bottom: 20px;
             color: #ff653f;
+            font-size: 32px;
         }
 
-        input {
+        .input-group {
+            position: relative;
+
+            input {
+                width: 100%;
+                padding: 10px 0;
+                font-size: 16px;
+                letter-spacing: 1px;
+                margin-bottom: 30px;
+                border: none;
+                border-bottom: 1px solid #ffffff;
+                outline: none;
+                background-color: transparent;
+                color: inherit;
+            }
+
+            label {
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 10px;
+                font-size: 16px;
+                pointer-events: none;
+                transition: 0.3s ease-out;
+            }
+
+            input:focus + label,
+            input:valid + label {
+                transform: translateY(-20px);
+                color: #ff653f;
+                font-size: 14px;
+            }
+        }
+
+        .btn-group {
             width: 100%;
-            padding: 10px 0;
-            font-size: 16px;
-            letter-spacing: 1px;
-            margin-bottom: 30px;
-            border: none;
-            border-bottom: 1px solid #ffffff;
-            outline: none;
-            background-color: transparent;
-            color: inherit;
-        }
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
 
-        label {
-            position: absolute;
-            top: 0;
-            left: 0;
-            padding: 10px;
-            font-size: 16px;
-            pointer-events: none;
-            transition: 0.3s ease-out;
+            .registration-btn {
+                display: block;
+                margin-left: auto;
+                border: none;
+                outline: none;
+                background: #ff653f;
+                font-size: 16px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                padding: 10px 15px;
+                border-radius: 5px;
+                cursor: pointer;
+                margin: 0;
+            }
         }
-
-        input:focus + label,
-        input:valid + label {
-            transform: translateY(-20px);
-            color: #ff653f;
-            font-size: 14px;
-        }
+        
     }
 }

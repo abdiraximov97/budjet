@@ -1,21 +1,27 @@
 
 <%- include("parts/header") %> 
+<% var error %> 
 
 <div class="login-wrapper">
-    <form action="/" method="Post" class="signUpForm">
+    <form action="/" method="POST" class="signUpForm" autocomplete="off">
         <img src="/assets/photo/avatar.png" class="userImg" alt="avatar img">
         <h2 class="title"> Kirish </h2>
+        <% if(error) { %>
+            <div class="alert alert-danger my-2" role="alert">
+                <%= error %> 
+              </div>
+        <% } %> 
         <div class="input-group">
-            <input type="text" name="userLogin" id="userLogin" required>
-            <label for="userLogin">Login</label>
+            <input type="text" name="email" id="email" required>
+            <label for="email">Email</label>
         </div>
         <div class="input-group">
-            <input type="password" name="userPassword" id="userPassword" required>
-            <label for="userPassword">Parol</label>
+            <input type="password" name="password" id="password" required>
+            <label for="password">Parol</label>
         </div>
         <div class="btn-group">
-            <a href="./registration.ejs" class="reg-link">Ro'yxatdan o'tish</a>
-            <input type="submit" name="submitBtn" value="kirish" class="submit-btn">
+            <a href="/registration" class="reg-link">Ro'yxatdan o'tish</a>
+            <button type="submit" class="submit-btn">Kirish</button>
         </div>
         <a href="#forgot-pw" class="forgot-pw">Parolni unutdizgizmi</a>
     </form>
@@ -25,10 +31,10 @@
             <a href="#" class="close">&times;</a>
             <h2 class="title">Parolni tiklash</h2>
             <div class="input-group">
-                <input type="email" name="email" id="email" autocomplete="off" required>
+                <input type="email" name="email" id="email" required>
                 <label for="email">Email</label>
             </div>
-            <input type="submit" name="submitButton" value="tekshirish" class="submit-btn">
+            <button class="submit-btn" type="submit">Tekshirish</button>
         </form>
     </div>
 </div>
