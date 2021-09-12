@@ -1,8 +1,18 @@
 
-const bcrypt = require("bcrypt");
+const {genSalt, hash, compare} = require("bcrypt");
+//const { genSalt } = require("bcrypt");
+
+async function generateCrypt(data) {
+    const salt = await genSalt(10);
+
+    return await hash(data, salt);
+}
+
+async function compareHash(hash, data) {
+    return compare(hash, data) 
+}
 
 module.exports.createCrypt = async function createCrypt(word) {
-    const salt = await bcrypt.genSalt(10);
-    console.log(salt);
-    return await bcrypt.hash(word, salt);
+    generateCrypt,
+    compareHash
 }
