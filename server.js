@@ -14,18 +14,24 @@ app.use(express.urlencoded({
 app.set("view engine", "ejs");
 app.use(cookieParser());
 
+
 app.use("/assets", express.static("assets"));
 
 app.use("/uploads", express.static(path.join(__dirname, "public")));
 
+// routes
 (async function() {
-    let db = await mongo();
-    await app.use((req, res, next) => {
-        req.db = db;
-        next();
-    });
-
-    routes(server);
+    const db = await mongo();
+    try {
+        app.use((req, res, next) => {
+            req.db = db;
+            next();
+        })
+    } catch (error) {
+        console.log("server error", error)
+    } finally {
+        routes(app);
+    }
 })();
 
 

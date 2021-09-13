@@ -3,16 +3,16 @@
 <% var error %> 
 
 <div class="login-wrapper">
-    <form action="/" method="POST" class="signUpForm" autocomplete="off">
+    <form method="POST" class="signUpForm" autocomplete="off">
         <img src="/assets/photo/avatar.png" class="userImg" alt="avatar img">
         <h2 class="title"> Kirish </h2>
         <% if(error) { %>
-            <div class="alert alert-danger my-2" role="alert">
+            <div class="alert alert-danger mb-2" role="alert">
                 <%= error %> 
               </div>
         <% } %> 
         <div class="input-group">
-            <input type="text" name="email" id="email" required>
+            <input type="email" name="email" id="email" required>
             <label for="email">Email</label>
         </div>
         <div class="input-group">

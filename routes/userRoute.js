@@ -1,22 +1,19 @@
 
 const router = require("express").Router();
-const { createCrypt } = require("../modules/bcrypt");
+const { generateCrypt } = require("../modules/bcrypt");
+const { SignUpValidation } = require("../modules/validations");
+const HomeSignUpPostController = require("../controllers/HomeSignUpPostController");
+
 
 router.get("/", (req, res) => {
     res.render("index");
 });
 
-router.post("/", async (req, res) => {
-    const {email, password} = req.body;
-    console.log(req.body);
-    if(!(email && password)) {
-        res.render("index", {
-            error: "Email yoki parol xato!",
-        });
-        return;
-    }
-
+router.get("/registration", (req, res) => {
+    res.render("registration");
 });
+
+router.post("/registration", HomeSignUpPostController);
 
 module.exports = {
     router,
